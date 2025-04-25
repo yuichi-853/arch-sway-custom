@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background: #f0f0f0;
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0 0 0.5em 0;
+}
+
+header nav a {
+    margin-right: 1em;
+    text-decoration: none;
+    color: #333;
+}
+
+.layout {
+    display: flex;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+#content {
+    /* flex: 1; */
+    /* padding: 2rem; */
+    /* margin: 1rem 3rem 0 3rem; */
+    /* padding: 0 8em; */
+    /* border: 1px solid #ddd; */
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* サイドパネル */
+#toc-panel {
+    /* left: 0; */
+    /* top: 0; */
+    width: 200px;
+    height: 100%;
+    background-color: #ffffff;
+    /* overflow-y: auto; */
+    /* position: sticky; */
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+    /* transform: translateX(-100%); */
+    /* 最初は隠す */
+    z-index: 1000;
+}
+
+/* トグルで表示状態 */
+#toc-panel {}
+
+#article-toc a {
+    display: block;
+    padding: 4px 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+#article-toc a:hover {
+    background-color: #eaeaea;
+}
+
+
+/* #left-menu, */
+/* #right-menu { */
+/*     position: fixed; */
+/*     top: 4.5em; */
+/*     bottom: 0; */
+/*     width: 15rem; */
+/*     overflow-y: auto; */
+/*     background: #fafafa; */
+/*     padding: 1em; */
+/*     border: 1px solid #ddd; */
+/* } */
+/**/
+/* #left-menu { */
+/*     left: 0; */
+/*     border-right: none; */
+/* } */
+/**/
+/* #right-menu { */
+/*     right: 0; */
+/*     border-left: none; */
+/* } */
+/**/
+/* #article-toc a { */
+/*     display: block; */
+/*     margin: 0.3em 0; */
+/* } */
+
+pre {
+    background: #f2f2f2;
+    padding: 0.5em;
+    overflow-x: auto;
+}
+
+code {
+    background: #eee;
+    padding: 0.2em;
+}
