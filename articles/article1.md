@@ -29,23 +29,32 @@
 コードブロックのbash構文ハイライトの確認：
 
 ```bash
-sudo pacman -S nvim
-```
+#!/bin/bash
 
-```toml
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# ハイライトテスト用のサンプルスクリプト
 
-[manager]
-ratio          = [ 1, 4, 3 ]
-sort_by        = "alphabetical"
-sort_sensitive = false
-sort_reverse 	 = false
-sort_dir_first = true
-sort_translit  = false
-linemode       = "none"
-show_hidden    = true
-show_symlink   = true
-scrolloff      = 5
-mouse_events   = [ "click", "scroll" ]
-title_format   = "Yazi: {cwd}"
+# 変数定義
+NAME="Swayユーザー"
+COUNT=3
+
+# 関数定義
+greet() {
+  echo "こんにちは、$NAME さん！"
+}
+
+# ループと条件分岐
+for i in $(seq 1 $COUNT); do
+  if [ "$i" -eq 2 ]; then
+    echo "これは2回目の挨拶です。"
+  else
+    greet
+  fi
+done
+
+# コマンド実行と条件判定
+if command -v sway > /dev/null; then
+  echo "Sway はインストールされています。"
+else
+  echo "Sway はインストールされていません。"
+fi
 ```
