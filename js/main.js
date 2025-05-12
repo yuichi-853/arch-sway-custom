@@ -15,25 +15,25 @@ window.addEventListener("DOMContentLoaded", () => {
             contentEl.innerHTML = html;
 
             // ✅ YouTubeリンクをiframeに変換
-            contentEl.querySelectorAll("a").forEach(link => {
-                const href = link.href;
-                const match = href.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-                if (match) {
-                    const videoId = match[1];
-                    const wrapper = document.createElement("div");
-                    wrapper.className = "ratio ratio-16x9 mb-4"; // Bootstrapの埋め込み対応クラス
-
-                    const iframe = document.createElement("iframe");
-                    iframe.src = `https://www.youtube.com/embed/${videoId}`;
-                    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-                    iframe.referrerPolicy = "strict-origin-when-cross-origin";
-                    iframe.allowFullscreen = true;
-                    iframe.title = "YouTube video player";
-
-                    wrapper.appendChild(iframe);
-                    link.replaceWith(wrapper);
-                }
-            });
+            // contentEl.querySelectorAll("a").forEach(link => {
+            //     const href = link.href;
+            //     const match = href.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+            //     if (match) {
+            //         const videoId = match[1];
+            //         const wrapper = document.createElement("div");
+            //         wrapper.className = "ratio ratio-16x9 mb-4"; // Bootstrapの埋め込み対応クラス
+            //
+            //         const iframe = document.createElement("iframe");
+            //         iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            //         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            //         iframe.referrerPolicy = "strict-origin-when-cross-origin";
+            //         iframe.allowFullscreen = true;
+            //         iframe.title = "YouTube video player";
+            //
+            //         wrapper.appendChild(iframe);
+            //         link.replaceWith(wrapper);
+            //     }
+            // });
 
             hljs.highlightAll();
         })
